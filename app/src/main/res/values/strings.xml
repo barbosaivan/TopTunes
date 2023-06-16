@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TopTunes</string>
+    <string name="subtitle_app">Top artistas Colombia</string>
+    <string name="name_logo">Logo</string>
+    <string name="description_logo">music</string>
+    <string name="main_error_empty_artist">Servicio no disponible</string>
+    <string name="error_server">Error en el servidor</string>
+    <string name="text_listeners">Seguidores</string>
 </resources>
