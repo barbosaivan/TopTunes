@@ -1,5 +1,6 @@
 package com.ivanbarbosa.toptunes.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +8,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.ivanbarbosa.toptunes.databinding.ActivityMainBinding
-import com.ivanbarbosa.toptunes.enity.Artist
+import com.ivanbarbosa.toptunes.enities.artists.Artist
 import com.ivanbarbosa.toptunes.view.adapters.ArtistAdapter
-import com.ivanbarbosa.toptunes.view.adapters.OnClickListener
+import com.ivanbarbosa.toptunes.view.adapters.onClickListener.OnClickListener
 import com.ivanbarbosa.toptunes.viewModel.MainViewModel
 
 class MainActivity : AppCompatActivity(), OnClickListener {
@@ -65,7 +66,9 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     }
 
     override fun onClick(artist: Artist) {
-        //
+        val intent = Intent(this, ArtistActivity::class.java)
+        intent.putExtra("artist", artist)
+        startActivity(intent)
     }
 
 }

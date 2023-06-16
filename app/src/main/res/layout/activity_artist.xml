@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:background="@color/ghost_white"
+    android:layout_height="match_parent"
+    tools:context=".view.ArtistActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_artist"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:src="@drawable/ic_music"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="@dimen/dimension_default"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_artists"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimension_default"
+            android:maxLines="1"
+            android:textColor="@color/granite_gray"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/image_artist"
+            app:layout_constraintStart_toStartOf="@id/image_artist" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_see"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimension_default"
+            android:backgroundTint="@color/vivid_violet"
+            android:text="@string/text_button_see"
+            android:textColor="@color/white"
+            app:cornerRadius="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/image_artist"
+            app:layout_constraintEnd_toEndOf="@id/image_artist" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/subtitle_top_songs"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimension_min"
+            android:layout_marginStart="@dimen/dimension_default"
+            android:text="@string/tilte_top_tracks_artist"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_artist" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_tracks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimension_min"
+            tools:listitem="@layout/item_song"
+            app:layout_constraintTop_toBottomOf="@id/subtitle_top_songs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

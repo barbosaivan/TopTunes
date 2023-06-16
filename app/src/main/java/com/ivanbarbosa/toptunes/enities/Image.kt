@@ -1,6 +1,7 @@
-package com.ivanbarbosa.toptunes.enity
+package com.ivanbarbosa.toptunes.enities
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
 /*
@@ -13,4 +14,4 @@ import com.google.gson.annotations.SerializedName
 data class Image(
     @SerializedName("#text") val text: String,
     val size: String
-)
+): Serializable

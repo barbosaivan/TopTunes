@@ -1,7 +1,8 @@
 package com.ivanbarbosa.toptunes.model
 
 import com.ivanbarbosa.toptunes.dataAccess.ApiService
-import com.ivanbarbosa.toptunes.enity.ApiResponseArtist
+import com.ivanbarbosa.toptunes.enities.artists.ApiResponseArtist
+import com.ivanbarbosa.toptunes.enities.tracks.ApiResponseTrack
 import com.ivanbarbosa.toptunes.utils.Constants
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -28,5 +29,14 @@ class RequestApi {
         format: String
     ): ApiResponseArtist = withContext(Dispatchers.IO) {
         service.getArtist(method, country, apiKey, format)
+    }
+
+    suspend fun getTopTracks(
+        method: String,
+        artist: String,
+        apiKey: String,
+        format: String
+    ): ApiResponseTrack = withContext(Dispatchers.IO) {
+        service.getTrack(method, artist, apiKey, format)
     }
 }

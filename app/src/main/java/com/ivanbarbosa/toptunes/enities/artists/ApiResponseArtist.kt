@@ -1,6 +1,6 @@
-package com.ivanbarbosa.toptunes.enity
+package com.ivanbarbosa.toptunes.enities.artists
 
-/* 
+/*
 * Project: TopTunes
 * From: com.ivanbarbosa.toptunes.enity
 * Create by Ivan Barbosa on 15/06/2023 at 5:55 p. m.

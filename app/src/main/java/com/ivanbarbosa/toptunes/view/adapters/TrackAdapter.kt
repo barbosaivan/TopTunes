@@ -8,60 +8,58 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ivanbarbosa.toptunes.R
-import com.ivanbarbosa.toptunes.databinding.ItemArtistBinding
-import com.ivanbarbosa.toptunes.enities.artists.Artist
+import com.ivanbarbosa.toptunes.databinding.ItemSongBinding
+import com.ivanbarbosa.toptunes.enities.tracks.Track
 import com.ivanbarbosa.toptunes.utils.Validations
-import com.ivanbarbosa.toptunes.view.adapters.onClickListener.OnClickListener
-import java.util.*
+import com.ivanbarbosa.toptunes.view.adapters.onClickListener.OnClickListenerTrack
 
 /* 
 * Project: TopTunes
-* From: com.ivanbarbosa.toptunes.view
-* Create by Ivan Barbosa on 15/06/2023 at 7:13 p. m.
+* From: com.ivanbarbosa.toptunes.view.adapters
+* Create by Ivan Barbosa on 16/06/2023 at 1:15 a. m.
 * Linkedin: https://www.linkedin.com/in/ivanbarbosaortega/
 */
-class ArtistAdapter(private var artists: List<Artist>, private var listener: OnClickListener) :
-    RecyclerView.Adapter<ArtistAdapter.ViewHolder>() {
+class TrackAdapter(private var tracks: List<Track>, private var listener: OnClickListenerTrack) :
+    RecyclerView.Adapter<TrackAdapter.ViewHolder>() {
 
     private lateinit var context: Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context = parent.context
-        val view = LayoutInflater.from(context).inflate(R.layout.item_artist, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_song, parent, false)
         return ViewHolder(view)
     }
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val artist = artists[position]
+        val track = tracks[position]
         with(holder) {
-            setListener(artist)
-            binding.nameArtists.text = artist.name
-            binding.countListen.text = Validations.separateDigits(artist.listeners)
-            binding.rank.text = (position + 1).toString()
-            val imageUrl = Validations.getImageUrlBySize(artist.image, "medium")
+            setListener(track)
+            binding.nameSong.text = track.name
+            binding.countPlay.text = Validations.separateDigits(track.playcount)
+            val imageUrl = Validations.getImageUrlBySize(track.image, "medium")
             if (imageUrl != null) {
                 Glide.with(context)
                     .load(imageUrl)
                     .diskCacheStrategy(com.bumptech.glide.load.engine.DiskCacheStrategy.ALL)
                     .centerCrop()
-                    .into(binding.imageArtist)
+                    .into(binding.imageSong)
             }
         }
     }
 
-    override fun getItemCount(): Int = artists.size
+    override fun getItemCount(): Int = tracks.size
 
-    fun setArtist(artists: List<Artist>) {
-        this.artists = artists
+    fun setTrack(tracks: List<Track>) {
+        this.tracks = tracks
         this.notifyDataSetChanged()
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val binding = ItemArtistBinding.bind(view)
-        fun setListener(artist: Artist) {
+        val binding = ItemSongBinding.bind(view)
+        fun setListener(track: Track) {
             with(binding.root) {
-                setOnClickListener { listener.onClick(artist) }
+                setOnClickListener { listener.onClick(track) }
             }
         }
     }

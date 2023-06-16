@@ -1,4 +1,7 @@
-package com.ivanbarbosa.toptunes.enity
+package com.ivanbarbosa.toptunes.enities.artists
+
+import com.ivanbarbosa.toptunes.enities.Image
+import java.io.Serializable
 
 /* 
 * Project: TopTunes
@@ -10,4 +13,4 @@ data class Artist(
     val name: String, val listeners:
     Int, val url: String,
     val image: List<Image>
-)
+): Serializable

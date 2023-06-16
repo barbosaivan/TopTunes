@@ -1,4 +1,4 @@
-package com.ivanbarbosa.toptunes.enity
+package com.ivanbarbosa.toptunes.enities.artists
 
 import com.google.gson.annotations.SerializedName
 

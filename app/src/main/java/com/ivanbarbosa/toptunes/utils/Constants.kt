@@ -9,6 +9,7 @@ package com.ivanbarbosa.toptunes.utils
     const val BASE_URL = "https://ws.audioscrobbler.com/2.0/"
     const val METHOD_PARAM = "method"
     const val COUNTRY_PARAM = "country"
+    const val ARTIST_PARAM = "artist"
     const val API_KEY_PARAM = "api_key"
     const val FORMAT_PARAM = "format"
 }
