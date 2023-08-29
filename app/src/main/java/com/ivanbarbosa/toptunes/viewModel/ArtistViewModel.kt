@@ -15,7 +15,8 @@ import kotlinx.coroutines.launch
 * From: com.ivanbarbosa.toptunes.viewModel
 * Create by Ivan Barbosa on 16/06/2023 at 1:50 a. m.
 * Linkedin: https://www.linkedin.com/in/ivanbarbosaortega/
-*/class ArtistViewModel : ViewModel() {
+*/
+class ArtistViewModel : ViewModel() {
     private val artistModel = ArtistModel()
     private val result = MutableLiveData<ApiResponseTrack>()
     private val snackbarMsg = MutableLiveData<Int>()
