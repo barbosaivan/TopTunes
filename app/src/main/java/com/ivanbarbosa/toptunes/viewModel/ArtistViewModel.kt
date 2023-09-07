@@ -7,7 +7,9 @@ import androidx.lifecycle.viewModelScope
 import com.ivanbarbosa.toptunes.R
 import com.ivanbarbosa.toptunes.entities.tracks.ApiResponseTrack
 import com.ivanbarbosa.toptunes.model.ArtistModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /*
 * Project: TopTunes
@@ -15,22 +17,15 @@ import kotlinx.coroutines.launch
 * Create by Ivan Barbosa on 16/06/2023 at 1:50 a. m.
 * Linkedin: https://www.linkedin.com/in/ivanbarbosaortega/
 */
-class ArtistViewModel : ViewModel() {
-    private var artistModel = ArtistModel()
+@HiltViewModel
+class ArtistViewModel @Inject constructor(private val artistModel: ArtistModel) : ViewModel() {
+
     private val result = MutableLiveData<ApiResponseTrack>()
     private val snackbarMsg = MutableLiveData<Int>()
 
     fun getResult(): LiveData<ApiResponseTrack> = result
 
     fun getSnackbarMsg() = snackbarMsg
-
-    /**
-     * Método solo para uso en pruebas.
-     * Establece el objeto [artistModel] para pruebas.
-     */
-    fun setArtistModel(artistModel: ArtistModel) {
-        this.artistModel = artistModel
-    }
 
     fun getTrack(method: String, artist: String, apiKey: String, format: String) {
         viewModelScope.launch {

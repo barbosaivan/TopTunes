@@ -7,7 +7,9 @@ import androidx.lifecycle.viewModelScope
 import com.ivanbarbosa.toptunes.R
 import com.ivanbarbosa.toptunes.entities.artists.ApiResponseArtist
 import com.ivanbarbosa.toptunes.model.MainModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /* 
 * Project: TopTunes
@@ -15,12 +17,11 @@ import kotlinx.coroutines.launch
 * Create by Ivan Barbosa on 15/06/2023 at 4:27 p. m.
 * Linkedin: https://www.linkedin.com/in/ivanbarbosaortega/
 */
-class MainViewModel: ViewModel() {
-    private val mainModel = MainModel()
+@HiltViewModel
+class MainViewModel @Inject constructor(private val mainModel: MainModel) : ViewModel() {
     private val result = MutableLiveData<ApiResponseArtist>()
     private val snackbarMsg = MutableLiveData<Int>()
     private val loaded = MutableLiveData<Boolean>()
-
 
     fun getResult(): LiveData<ApiResponseArtist> = result
 
@@ -28,18 +29,18 @@ class MainViewModel: ViewModel() {
 
     fun isLoaded() = loaded
 
-    fun getArtist(method: String, country: String, apiKey: String, format: String){
+    fun getArtist(method: String, country: String, apiKey: String, format: String) {
         viewModelScope.launch {
             try {
                 loaded.value = false
                 val resultServer = mainModel.getTopArtist(method, country, apiKey, format)
                 result.value = resultServer
-                if (resultServer.topartists.artist.isEmpty()){
+                if (resultServer.topartists.artist.isEmpty()) {
                     snackbarMsg.value = R.string.main_error_empty_artist
                 }
             } catch (e: Exception) {
                 snackbarMsg.value = R.string.error_server
-            }finally {
+            } finally {
                 loaded.value = true
             }
         }

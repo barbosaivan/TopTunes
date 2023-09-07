@@ -5,8 +5,8 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
@@ -18,13 +18,15 @@ import com.ivanbarbosa.toptunes.utils.Validations
 import com.ivanbarbosa.toptunes.view.adapters.TrackAdapter
 import com.ivanbarbosa.toptunes.view.adapters.onClickListener.OnClickListenerTrack
 import com.ivanbarbosa.toptunes.viewModel.ArtistViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ArtistActivity : AppCompatActivity(), OnClickListenerTrack {
 
     private lateinit var binding: ActivityArtistBinding
     private lateinit var trackAdapter: TrackAdapter
     private lateinit var gridLayout: GridLayoutManager
-    private lateinit var artistViewModel: ArtistViewModel
+    private val artistViewModel: ArtistViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -89,7 +91,6 @@ class ArtistActivity : AppCompatActivity(), OnClickListenerTrack {
     }
 
     private fun setUpViewModel() {
-        artistViewModel = ViewModelProvider(this)[ArtistViewModel::class.java]
         artistViewModel.getResult().observe(this) { artist ->
             trackAdapter.setTrack(artist.toptracks.track.sortedBy { it.attr.rank }.take(5))
         }

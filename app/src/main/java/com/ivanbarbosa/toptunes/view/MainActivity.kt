@@ -3,8 +3,8 @@ package com.ivanbarbosa.toptunes.view
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.ivanbarbosa.toptunes.databinding.ActivityMainBinding
@@ -12,12 +12,14 @@ import com.ivanbarbosa.toptunes.entities.artists.Artist
 import com.ivanbarbosa.toptunes.view.adapters.ArtistAdapter
 import com.ivanbarbosa.toptunes.view.adapters.onClickListener.OnClickListener
 import com.ivanbarbosa.toptunes.viewModel.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(), OnClickListener {
     private lateinit var binding: ActivityMainBinding
     private lateinit var artistAdapter: ArtistAdapter
     private lateinit var gridLayout: GridLayoutManager
-    private lateinit var mainViewModel: MainViewModel
+    private val mainViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +42,6 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     }
 
     private fun setUpViewModel() {
-        mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
         mainViewModel.getResult().observe(this) { artist ->
             artistAdapter.setArtist(artist.topartists.artist.sortedByDescending { it.listeners }
                 .take(10))

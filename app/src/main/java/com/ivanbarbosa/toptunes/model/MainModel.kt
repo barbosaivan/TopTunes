@@ -1,6 +1,7 @@
 package com.ivanbarbosa.toptunes.model
 
 import com.ivanbarbosa.toptunes.entities.artists.ApiResponseArtist
+import javax.inject.Inject
 
 /* 
 * Project: TopTunes
@@ -8,8 +9,7 @@ import com.ivanbarbosa.toptunes.entities.artists.ApiResponseArtist
 * Create by Ivan Barbosa on 15/06/2023 at 4:27 p. m.
 * Linkedin: https://www.linkedin.com/in/ivanbarbosaortega/
 */
-class MainModel {
-    private val requestApi = RequestApi()
+class MainModel @Inject constructor(private val requestApi: RequestApi) {
 
     suspend fun getTopArtist(
         method: String,

@@ -47,8 +47,7 @@ class ArtistViewModelTest {
     fun setUp() {
         Dispatchers.setMain(testDispatcher)
         MockitoAnnotations.openMocks(this)
-        artistViewModel = ArtistViewModel()
-        artistViewModel.setArtistModel(artistModel)
+        artistViewModel = ArtistViewModel(artistModel)
         artistViewModel.getResult().observeForever(observer)
         artistViewModel.getSnackbarMsg().observeForever(snackbarObserver)
     }
