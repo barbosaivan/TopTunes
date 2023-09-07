@@ -1,7 +1,7 @@
 package com.ivanbarbosa.toptunes.dataAccess
 
-import com.ivanbarbosa.toptunes.enities.artists.ApiResponseArtist
-import com.ivanbarbosa.toptunes.enities.tracks.ApiResponseTrack
+import com.ivanbarbosa.toptunes.entities.artists.ApiResponseArtist
+import com.ivanbarbosa.toptunes.entities.tracks.ApiResponseTrack
 import com.ivanbarbosa.toptunes.utils.Constants
 import retrofit2.http.GET
 import retrofit2.http.Query

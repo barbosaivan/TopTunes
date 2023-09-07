@@ -1,8 +1,8 @@
 package com.ivanbarbosa.toptunes.model
 
 import com.ivanbarbosa.toptunes.dataAccess.ApiService
-import com.ivanbarbosa.toptunes.enities.artists.ApiResponseArtist
-import com.ivanbarbosa.toptunes.enities.tracks.ApiResponseTrack
+import com.ivanbarbosa.toptunes.entities.artists.ApiResponseArtist
+import com.ivanbarbosa.toptunes.entities.tracks.ApiResponseTrack
 import com.ivanbarbosa.toptunes.utils.Constants
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

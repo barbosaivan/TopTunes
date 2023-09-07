@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ivanbarbosa.toptunes.R
 import com.ivanbarbosa.toptunes.databinding.ItemArtistBinding
-import com.ivanbarbosa.toptunes.enities.artists.Artist
+import com.ivanbarbosa.toptunes.entities.artists.Artist
 import com.ivanbarbosa.toptunes.utils.Validations
 import com.ivanbarbosa.toptunes.view.adapters.onClickListener.OnClickListener
 import java.util.*

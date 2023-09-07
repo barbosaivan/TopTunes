@@ -1,7 +1,7 @@
-package com.ivanbarbosa.toptunes.enities.tracks
+package com.ivanbarbosa.toptunes.entities.tracks
 
 import com.google.gson.annotations.SerializedName
-import com.ivanbarbosa.toptunes.enities.Image
+import com.ivanbarbosa.toptunes.entities.Image
 
 /* 
 * Project: TopTunes

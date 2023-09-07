@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.ivanbarbosa.toptunes.databinding.ActivityMainBinding
-import com.ivanbarbosa.toptunes.enities.artists.Artist
+import com.ivanbarbosa.toptunes.entities.artists.Artist
 import com.ivanbarbosa.toptunes.view.adapters.ArtistAdapter
 import com.ivanbarbosa.toptunes.view.adapters.onClickListener.OnClickListener
 import com.ivanbarbosa.toptunes.viewModel.MainViewModel

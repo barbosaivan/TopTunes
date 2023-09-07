@@ -3,7 +3,7 @@ package com.ivanbarbosa.toptunes.viewModel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.ivanbarbosa.toptunes.R
-import com.ivanbarbosa.toptunes.enities.tracks.*
+import com.ivanbarbosa.toptunes.entities.tracks.*
 import com.ivanbarbosa.toptunes.model.ArtistModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

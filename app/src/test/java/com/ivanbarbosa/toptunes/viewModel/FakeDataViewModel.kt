@@ -1,10 +1,10 @@
 package com.ivanbarbosa.toptunes.viewModel
 
-import com.ivanbarbosa.toptunes.enities.Image
-import com.ivanbarbosa.toptunes.enities.tracks.AttrSong
-import com.ivanbarbosa.toptunes.enities.tracks.AttrTopTrack
-import com.ivanbarbosa.toptunes.enities.tracks.TopTracksArtist
-import com.ivanbarbosa.toptunes.enities.tracks.Track
+import com.ivanbarbosa.toptunes.entities.Image
+import com.ivanbarbosa.toptunes.entities.tracks.AttrSong
+import com.ivanbarbosa.toptunes.entities.tracks.AttrTopTrack
+import com.ivanbarbosa.toptunes.entities.tracks.TopTracksArtist
+import com.ivanbarbosa.toptunes.entities.tracks.Track
 
 /* 
 * Project: TopTunes

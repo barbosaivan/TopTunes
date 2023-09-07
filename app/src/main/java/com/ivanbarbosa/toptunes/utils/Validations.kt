@@ -1,6 +1,6 @@
 package com.ivanbarbosa.toptunes.utils
 
-import com.ivanbarbosa.toptunes.enities.Image
+import com.ivanbarbosa.toptunes.entities.Image
 import java.text.NumberFormat
 import java.util.*
 

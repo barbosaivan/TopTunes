@@ -1,6 +1,6 @@
 package com.ivanbarbosa.toptunes.model
 
-import com.ivanbarbosa.toptunes.enities.artists.ApiResponseArtist
+import com.ivanbarbosa.toptunes.entities.artists.ApiResponseArtist
 
 /* 
 * Project: TopTunes

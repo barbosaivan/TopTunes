@@ -1,6 +1,6 @@
-package com.ivanbarbosa.toptunes.enities.artists
+package com.ivanbarbosa.toptunes.entities.artists
 
-import com.ivanbarbosa.toptunes.enities.Image
+import com.ivanbarbosa.toptunes.entities.Image
 import java.io.Serializable
 
 /* 

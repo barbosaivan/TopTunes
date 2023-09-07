@@ -1,4 +1,4 @@
-package com.ivanbarbosa.toptunes.enities.tracks
+package com.ivanbarbosa.toptunes.entities.tracks
 
 /* 
 * Project: TopTunes

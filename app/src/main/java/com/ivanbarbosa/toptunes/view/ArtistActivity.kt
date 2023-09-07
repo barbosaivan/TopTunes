@@ -12,8 +12,8 @@ import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
 import com.ivanbarbosa.toptunes.R
 import com.ivanbarbosa.toptunes.databinding.ActivityArtistBinding
-import com.ivanbarbosa.toptunes.enities.artists.Artist
-import com.ivanbarbosa.toptunes.enities.tracks.Track
+import com.ivanbarbosa.toptunes.entities.artists.Artist
+import com.ivanbarbosa.toptunes.entities.tracks.Track
 import com.ivanbarbosa.toptunes.utils.Validations
 import com.ivanbarbosa.toptunes.view.adapters.TrackAdapter
 import com.ivanbarbosa.toptunes.view.adapters.onClickListener.OnClickListenerTrack

@@ -1,4 +1,4 @@
-package com.ivanbarbosa.toptunes.enities
+package com.ivanbarbosa.toptunes.entities
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

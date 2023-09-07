@@ -1,6 +1,6 @@
 package com.ivanbarbosa.toptunes.utils
 
-import com.ivanbarbosa.toptunes.enities.Image
+import com.ivanbarbosa.toptunes.entities.Image
 import org.junit.Assert.*
 
 import org.junit.Test

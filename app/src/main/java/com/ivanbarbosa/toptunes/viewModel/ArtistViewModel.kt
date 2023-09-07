@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ivanbarbosa.toptunes.R
-import com.ivanbarbosa.toptunes.enities.tracks.ApiResponseTrack
+import com.ivanbarbosa.toptunes.entities.tracks.ApiResponseTrack
 import com.ivanbarbosa.toptunes.model.ArtistModel
 import kotlinx.coroutines.launch
 
