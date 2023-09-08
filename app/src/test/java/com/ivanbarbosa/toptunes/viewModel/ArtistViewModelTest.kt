@@ -3,7 +3,9 @@ package com.ivanbarbosa.toptunes.viewModel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.ivanbarbosa.toptunes.R
-import com.ivanbarbosa.toptunes.entities.tracks.*
+import com.ivanbarbosa.toptunes.entities.tracks.ApiResponseTrack
+import com.ivanbarbosa.toptunes.fakeTopTracksArtist
+import com.ivanbarbosa.toptunes.fakeTopTracksArtistEmpty
 import com.ivanbarbosa.toptunes.model.ArtistModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -15,7 +17,6 @@ import org.junit.Test
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.MockitoAnnotations
-import java.lang.RuntimeException
 
 /* 
 * Project: TopTunes

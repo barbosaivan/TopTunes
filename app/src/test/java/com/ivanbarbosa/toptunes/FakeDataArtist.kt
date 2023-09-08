@@ -1,4 +1,4 @@
-package com.ivanbarbosa.toptunes.viewModel
+package com.ivanbarbosa.toptunes
 
 import com.ivanbarbosa.toptunes.entities.Image
 import com.ivanbarbosa.toptunes.entities.tracks.AttrSong
