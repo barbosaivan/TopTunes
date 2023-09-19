@@ -49,7 +49,7 @@ class ArtistActivity : AppCompatActivity(), OnClickListenerTrack {
     }
 
     private fun setUpViewData(artist: Artist) {
-        binding.nameArtists.text = artist.name
+        binding.nameArtistsByDetail.text = artist.name
 
         binding.btnSee.setOnClickListener {
             try {

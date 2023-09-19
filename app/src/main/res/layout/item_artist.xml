@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/name_artists"
+            android:id="@+id/name_artist"
             style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             android:textColor="@color/granite_gray"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@id/image_artist"
-            app:layout_constraintTop_toBottomOf="@id/name_artists" />
+            app:layout_constraintTop_toBottomOf="@id/name_artist" />
 
         <com.google.android.material.textview.MaterialTextView
             style="@style/TextAppearance.AppCompat.Body1"

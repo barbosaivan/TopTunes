@@ -6,7 +6,8 @@
     android:fillViewport="true"
     android:background="@color/ghost_white"
     android:layout_height="match_parent"
-    tools:context=".view.ArtistActivity">
+    tools:context=".view.ArtistActivity"
+    android:id="@+id/activity_artist">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/name_artists"
+            android:id="@+id/name_artists_by_detail"
             style="@style/TextAppearance.AppCompat.Body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

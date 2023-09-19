@@ -36,7 +36,7 @@ class ArtistAdapter(private var artists: List<Artist>, private var listener: OnC
         val artist = artists[position]
         with(holder) {
             setListener(artist)
-            binding.nameArtists.text = artist.name
+            binding.nameArtist.text = artist.name
             binding.countListen.text = Validations.separateDigits(artist.listeners)
             binding.rank.text = (position + 1).toString()
             val imageUrl = Validations.getImageUrlBySize(artist.image, "medium")
